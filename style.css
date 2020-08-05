@@ -1,0 +1,72 @@
+body {
+  margin: 0 10px;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1 {
+  text-align: center;
+}
+.quote {
+  display: flex;
+}
+.quote > div {
+  border: 2px solid black;
+  padding: 5px;
+  margin: 10px;
+  position: relative;
+  padding-top: 30px;
+  background-color: rgb(197, 194, 194);
+  font-weight: normal;
+  clear: left;
+}
+h3 {
+  margin-right: 0px;
+  position: absolute;
+  top: -20px;
+  right: 0px;
+  border: 2px solid black;
+  border-right: none;
+}
+#quote1 h3 {
+  background-color: pink;
+}
+#quote2 h3 {
+  background-color: red;
+}
+#quote3 h3 {
+  background-color: yellow;
+}
+@media screen and (max-width: 480px) {
+  .quote {
+    flex-direction: column;
+  }
+  .quote > div {
+    width: calc(100% - 40px);
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 770px) {
+  .quote {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .quote :nth-last-child(3) {
+    display: inline;
+  }
+  #quote1 {
+    flex: 1 1 0;
+  }
+  #quote2 {
+    flex: 1 1 0;
+  }
+  #quote3 {
+    flex: 100%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .quote > div {
+    width: 33%;
+  }
+}
