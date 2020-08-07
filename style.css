@@ -36,6 +36,8 @@ h3 {
 #quote3 h3 {
   background-color: yellow;
 }
+
+/*for mobile screen*/
 @media screen and (max-width: 480px) {
   .quote {
     flex-direction: column;
@@ -45,14 +47,13 @@ h3 {
   }
 }
 
+
+/*for tablet*/
 @media screen and (min-width: 481px) and (max-width: 770px) {
   .quote {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-  }
-  .quote :nth-last-child(3) {
-    display: inline;
   }
   #quote1 {
     flex: 1 1 0;
@@ -64,7 +65,7 @@ h3 {
     flex: 100%;
   }
 }
-
+/*for desktop*/
 @media (min-width: 1000px) {
   .quote > div {
     width: 33%;
